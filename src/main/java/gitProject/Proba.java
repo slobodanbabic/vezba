@@ -55,6 +55,8 @@ public class Proba {
 
 		git.commit().setMessage("Initial commit").call();
 		System.out.println("Committed file " + fajl + " to repository at " + git.getRepository().getDirectory());
+		
+		// progresija
 		System.out.println("\n>>> Printing status of local repository\n");
 		Status status = git.status().setProgressMonitor(consoleProgressMonitor).call();
 		System.out.println("Modified file = " + status.getModified());
