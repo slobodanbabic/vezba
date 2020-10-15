@@ -77,7 +77,7 @@ public class Proba {
                 .setCredentialsProvider(
                         new UsernamePasswordCredentialsProvider("slobodannbabic@gmail.com","Tomicevo007")
                 )
-                .call();
+                .call();  
         System.out.println("finish");
 	}
 	//promena
