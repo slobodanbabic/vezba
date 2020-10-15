@@ -7,24 +7,23 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Writer;
 
+import org.eclipse.jgit.api.Git;
+
 public class Proba {
 
 	public static void main(String[] args) throws Exception {
-	
 
 		Writer writer = null;
 		File fajl = new File("NovaKlasa.java");
 
 		try {
 			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fajl), "utf-8"));
-			StringBuilder  str = new StringBuilder();
+			StringBuilder str = new StringBuilder();
 			str.append("public class NovaKlasa {");
 			str.append("}");
 			writer.write(str.toString());
-			
-			
-			
-		} catch (IOException ex) {			
+
+		} catch (IOException ex) {
 		} finally {
 			try {
 				writer.close();
@@ -35,16 +34,24 @@ public class Proba {
 		System.out.println(fajl.getAbsolutePath());
 		File myObj = new File("filename.java");
 		if (myObj.createNewFile()) {
-			
+
 			System.out.println("File created: " + myObj.getName());
 		} else {
 			System.out.println("File already exists.");
 		}
 
 		System.out.println(myObj.getAbsolutePath());
-	
-		 
+		//Repository repo = GitHelper.openRepository();
 		
+        // This code would allow to access an existing repository
+        Git git = Git.open(new File(System.getProperty("user.dir")));
+         
+
+      
+		git.add().addFilepattern(".").call();
+
+		git.commit().setMessage("Initial commit").call();
+		System.out.println("Committed file " + fajl + " to repository at " + git.getRepository().getDirectory());
 
 	}
 }
