@@ -56,7 +56,7 @@ public class Proba {
         
         git.add().addFilepattern(".").call();
 
-		git.commit().setMessage("Initial commit").call();
+		git.commit().setAll(true).setMessage("Initial commit").call();
 		System.out.println("Committed file " + fajl + " to repository at " + git.getRepository().getDirectory());
 		
 		// progresija
