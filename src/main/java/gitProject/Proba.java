@@ -12,6 +12,8 @@ import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.lib.TextProgressMonitor;
+import org.eclipse.jgit.transport.URIish;
+import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 
 public class Proba {
 
@@ -64,5 +66,18 @@ public class Proba {
 		Status status = git.status().setProgressMonitor(consoleProgressMonitor).call();
 		System.out.println("Modified file = " + status.getModified());
 
+		System.out.println("remote adding");
+        git.remoteAdd()
+                .setName("origin")
+                .setUri(new URIish("https://github.com/Skultrix/reciter.git"))
+                .call();
+        System.out.println("pushing");
+        git.push()
+                .setRemote("https://github.com/Skultrix/reciter.git")
+                .setCredentialsProvider(
+                        new UsernamePasswordCredentialsProvider("slobodannbabic@gmail.com","tomicevo007")
+                )
+                .call();
+        System.out.println("finish");
 	}
 }
