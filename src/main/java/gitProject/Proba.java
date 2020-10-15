@@ -8,6 +8,7 @@ import java.io.OutputStreamWriter;
 import java.io.Writer;
 
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.lib.Repository;
 
 public class Proba {
 
@@ -41,7 +42,7 @@ public class Proba {
 		}
 
 		System.out.println(myObj.getAbsolutePath());
-		//Repository repo = GitHelper.openRepository();
+		Repository repo = GitHelper.openRepository();
 		
         // This code would allow to access an existing repository
         Git git = Git.open(new File(System.getProperty("user.dir")));
