@@ -7,11 +7,13 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.List;
 
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.Status;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.lib.TextProgressMonitor;
+import org.eclipse.jgit.transport.RemoteConfig;
 import org.eclipse.jgit.transport.URIish;
 import org.eclipse.jgit.transport.UsernamePasswordCredentialsProvider;
 
@@ -55,6 +57,15 @@ public class Proba {
 		
         // This code would allow to access an existing repository
         Git git = Git.open(new File(System.getProperty("user.dir")));
+        
+        //fecovanje pre nego sto pocnemo
+        List<RemoteConfig> remotes = git.remoteList().call();
+        for(RemoteConfig remote : remotes) {
+          git.fetch()
+              .setRemote(remote.getName())
+              .setRefSpecs(remote.getFetchRefSpecs())
+              .call();
+        }
         
         git.add().addFilepattern(".").call();
 
