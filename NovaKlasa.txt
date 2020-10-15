@@ -1,1 +1,1 @@
-public class NovaKlasa {} asd
+public class NovaKlasa {} asd boba
