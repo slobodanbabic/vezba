@@ -18,6 +18,9 @@ public class Proba {
 	public static void main(String[] args) throws Exception {
 		// Monitor to get git command progress printed on java System.out console
 		TextProgressMonitor consoleProgressMonitor = new TextProgressMonitor(new PrintWriter(System.out));
+		// Local directory on this machine where we will clone remote repo.
+		File localRepoDir = new File(System.getProperty("user.dir")+"\\testic");
+		System.out.println(localRepoDir);
 		Writer writer = null;
 		File fajl = new File("NovaKlasa.txt");
 
