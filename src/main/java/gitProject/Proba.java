@@ -38,7 +38,7 @@ public class Proba {
 			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fajl), "utf-8"));
 			StringBuilder str = new StringBuilder();
 			str.append("public class NovaKlasa {");
-			str.append("} asd boba novi boba");
+			str.append("} ");
 			writer.write(str.toString());
 
 		} catch (IOException ex) {
