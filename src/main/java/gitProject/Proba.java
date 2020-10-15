@@ -58,7 +58,14 @@ public class Proba {
         // This code would allow to access an existing repository
         Git git = Git.open(new File(System.getProperty("user.dir")));
         
-        
+        //fecovanje pre nego sto pocnemo
+        List<RemoteConfig> remotes = git.remoteList().call();
+        for(RemoteConfig remote : remotes) {
+          git.fetch()
+              .setRemote(remote.getName())
+              .setRefSpecs(remote.getFetchRefSpecs())
+              .call();
+        }
         
         git.add().addFilepattern(".").call();
 
@@ -83,14 +90,7 @@ public class Proba {
                 )
                 .call();  
         System.out.println("finish");
-      //fecovanje pre nego sto pocnemo
-        List<RemoteConfig> remotes = git.remoteList().call();
-        for(RemoteConfig remote : remotes) {
-          git.fetch()
-              .setRemote(remote.getName())
-              .setRefSpecs(remote.getFetchRefSpecs())
-              .call();
-        }
+     
 	}     
 	//promena
 	
