@@ -22,7 +22,7 @@ public class Proba {
 		File localRepoDir = new File("dsadsa.txt");
 		System.out.println(localRepoDir);
 		Writer writer = null;
-		File fajl = new File("NovaKlasa.txt");
+		File fajl = new File("NovaKlasaaaaaaaaaaa.txt");
 
 		try {
 			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fajl), "utf-8"));
