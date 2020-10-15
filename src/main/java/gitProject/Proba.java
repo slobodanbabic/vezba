@@ -65,7 +65,7 @@ public class Proba {
               .setRemote(remote.getName())
               .setRefSpecs(remote.getFetchRefSpecs())
               .call();
-        }
+        } 
         
         git.add().addFilepattern(".").call();
 
