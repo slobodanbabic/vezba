@@ -58,8 +58,8 @@ public class Proba {
 		
 		// progresija
 		System.out.println("\n>>> Printing status of local repository\n");
-		Status status = git.status().setProgressMonitor(consoleProgressMonitor).call();
-		System.out.println("Modified file = " + status.getModified());
+		//Status status = git.status().setProgressMonitor(consoleProgressMonitor).call();
+		//System.out.println("Modified file = " + status.getModified());
 
 	}
 }
