@@ -27,6 +27,7 @@ public class Proba {
 		System.out.println(localRepoDir);
 		Writer writer = null;
 		File fajl = new File("NovaKlasa.txt");
+		fajl.createNewFile();
 
 		try {
 			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fajl), "utf-8"));
