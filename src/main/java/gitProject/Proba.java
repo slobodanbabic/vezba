@@ -19,7 +19,7 @@ public class Proba {
 		// Monitor to get git command progress printed on java System.out console
 		TextProgressMonitor consoleProgressMonitor = new TextProgressMonitor(new PrintWriter(System.out));
 		// Local directory on this machine where we will clone remote repo.
-		File localRepoDir = new File(System.getProperty("user.dir"));
+		File localRepoDir = new File("dsadsa.txt");
 		System.out.println(localRepoDir);
 		Writer writer = null;
 		File fajl = new File("NovaKlasa.txt");
