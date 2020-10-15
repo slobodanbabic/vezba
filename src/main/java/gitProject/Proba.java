@@ -19,13 +19,13 @@ public class Proba {
 		// Monitor to get git command progress printed on java System.out console
 		TextProgressMonitor consoleProgressMonitor = new TextProgressMonitor(new PrintWriter(System.out));
 		Writer writer = null;
-		File fajl = new File("NovaKlasa.java");
+		File fajl = new File("NovaKlasa.txt");
 
 		try {
 			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fajl), "utf-8"));
 			StringBuilder str = new StringBuilder();
 			str.append("public class NovaKlasa {");
-			str.append("} ");
+			str.append("} asd");
 			writer.write(str.toString());
 
 		} catch (IOException ex) {
