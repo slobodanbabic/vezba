@@ -46,8 +46,8 @@ public class Proba {
 		
         // This code would allow to access an existing repository
         Git git = Git.open(new File(System.getProperty("user.dir")));
-    System.out.println(git);
-		git.add().addFilepattern(".").call();
+        
+        git.add().addFilepattern(".").call();
 
 		git.commit().setMessage("Initial commit").call();
 		System.out.println("Committed file " + fajl + " to repository at " + git.getRepository().getDirectory());
