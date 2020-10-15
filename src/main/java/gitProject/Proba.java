@@ -73,7 +73,7 @@ public class Proba {
                 .call();
         System.out.println("pushing");
         git.push()
-                .setRemote("https://github.com/slobodanbabic/vezbagit")
+                .setRemote("https://github.com/slobodanbabic/vezba.git")
                 .setCredentialsProvider(
                         new UsernamePasswordCredentialsProvider("slobodannbabic@gmail.com","tomicevo007")
                 )
