@@ -69,11 +69,11 @@ public class Proba {
 		System.out.println("remote adding");
         git.remoteAdd()
                 .setName("origin")
-                .setUri(new URIish("https://github.com/Skultrix/reciter.git"))
+                .setUri(new URIish("https://github.com/slobodanbabic/vezba.git"))
                 .call();
         System.out.println("pushing");
         git.push()
-                .setRemote("https://github.com/Skultrix/reciter.git")
+                .setRemote("https://github.com/slobodanbabic/vezbagit")
                 .setCredentialsProvider(
                         new UsernamePasswordCredentialsProvider("slobodannbabic@gmail.com","tomicevo007")
                 )
