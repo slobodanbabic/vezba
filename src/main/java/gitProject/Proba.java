@@ -27,7 +27,12 @@ public class Proba {
 		System.out.println(localRepoDir);
 		Writer writer = null;
 		File fajl = new File("NovaKlasa.txt");
-		fajl.createNewFile();
+		if(!fajl.exists()){
+		  fajl.createNewFile();
+		}else{
+		  System.out.println("File already exists");
+		}
+		
 
 		try {
 			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fajl), "utf-8"));
