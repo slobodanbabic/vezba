@@ -35,10 +35,10 @@ public class Proba {
 		
 
 		try {
-			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fajl), "utf-8"));
+			writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(fajl,false), "utf-8"));
 			StringBuilder str = new StringBuilder();
 			str.append("public class NovaKlasa {");
-			str.append("} ");
+			str.append("} dsadsa");
 			writer.write(str.toString());
 
 		} catch (IOException ex) {

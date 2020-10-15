@@ -1,1 +1,1 @@
-public class NovaKlasa {} 
+public class NovaKlasa {} dsadsa
