@@ -75,7 +75,7 @@ public class Proba {
         git.push()
                 .setRemote("https://github.com/slobodanbabic/vezba.git")
                 .setCredentialsProvider(
-                        new UsernamePasswordCredentialsProvider("slobodannbabic@gmail.com","tomicevo007")
+                        new UsernamePasswordCredentialsProvider("slobodannbabic@gmail.com","Tomicevo007")
                 )
                 .call();
         System.out.println("finish");
