@@ -84,11 +84,11 @@ public class Proba {
 		Status status = git.status().setProgressMonitor(consoleProgressMonitor).call();
 		System.out.println("Modified file = " + status.getModified());
 
-		System.out.println("remote adding");
+	/*	System.out.println("remote adding");
         git.remoteAdd()
                 .setName("origin")
                 .setUri(new URIish("https://github.com/slobodanbabic/vezba.git"))
-               .call();
+               .call();*/
         System.out.println("pushing");
         git.push()
                 .setRemote("https://github.com/slobodanbabic/vezba.git")
