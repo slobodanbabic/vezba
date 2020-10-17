@@ -21,7 +21,6 @@ public class GitHelper {
         // prepare a new folder
         File localPath = File.createTempFile(System.getProperty("user.dir"), "");
         localPath.delete();
-
         // create the directory
         Repository repository = FileRepositoryBuilder.create(new File(System.getProperty("user.dir"), ".git"));
         repository.create();

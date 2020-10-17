@@ -10,6 +10,5 @@
 			<artifactId>org.eclipse.jgit</artifactId>
 			<version>5.9.0.202009080501-r</version>
 		</dependency>
-
 	</dependencies>
 </project>
